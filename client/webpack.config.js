@@ -1,5 +1,5 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   entry: './src/main.js',
@@ -12,11 +12,11 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ],
-      },      {
+        loader: 'style-loader!css-loader'
+      },
+      {test: /\.(eot|woff|ttf)$/, loader: 'file-loader'},
+
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
@@ -54,7 +54,7 @@ module.exports = {
     hints: false
   },
   devtool: '#eval-source-map'
-}
+};
 
 if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = '#source-map'

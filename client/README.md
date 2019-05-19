@@ -1,4 +1,4 @@
-# The Traveller
+# Kai's Travels
 
 > A Vue.js project
 
