@@ -1,4 +1,4 @@
-# Kai's Travels
+# Travel Review Site
 
 > A Vue.js project
 

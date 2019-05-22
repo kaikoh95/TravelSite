@@ -25,8 +25,9 @@
         </FormItem>
     </Form>
     <Footer class="layout-footer">
+      <Button align="center" style="margin-right: 30px; text-align: center" type="primary" onclick="window.location.href='/venues'">All Venues</Button>
       <Button type="warning" onclick="window.location.href='/'">Home</Button>
-      2019 &copy; Kai Koh
+      2019 &copy; Travel Review Site
     </Footer>
   </div>
 </template>

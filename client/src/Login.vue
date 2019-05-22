@@ -22,7 +22,7 @@
     </Form>
     <Footer class="layout-footer" style="text-align: end">
       <Button type="warning" onclick="window.location.href='/'">Home</Button>
-      2019 &copy; Kai Koh
+      2019 &copy; Travel Review Site
     </Footer>
   </div>
 </template>
@@ -51,7 +51,6 @@
       handleSubmit(name) {
         this.$refs[name].validate((valid) => {
           if (valid) {
-            console.log("check username:" + this.formLogin.user);
             if((this.formLogin.user).indexOf("@") === -1) {
               this.$http.post('http://localhost:4941/api/v1/users/login',
                 JSON.stringify({

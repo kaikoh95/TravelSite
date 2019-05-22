@@ -17,4 +17,6 @@
 .layout-footer{
   position: relative;
   text-align: right;
+  bottom: 0;
+  width: 100%;
 }
