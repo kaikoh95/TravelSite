@@ -9,6 +9,8 @@ COPY package.json /usr/src/app/
 RUN apk add --no-cache make gcc g++ python && \
   npm install --production --silent && \
   apk del make gcc g++ python
+
+RUN npm install
 # Bundle app source
 COPY . /usr/src/app
 
