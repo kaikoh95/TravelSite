@@ -1,4 +1,5 @@
 # MySQL script for inserting sample data into the database
+SET FOREIGN_KEY_CHECKS=0;
 
 
 INSERT INTO VenueCategory
@@ -32,3 +33,21 @@ VALUES
     (3, 8, 'Had to provide our own beanbags to sleep on.', 1, 0, '2018-09-28 07:42:11'),
     (3, 3, 'Good air conditioning.', 5, 0, '2018-06-01 10:31:45'),
     (3, 4, 'My favourite place on earth.', 4, 3, '2019-01-19 12:34:59');
+
+INSERT INTO User
+	(username, email, given_name, family_name, password)
+VALUES
+	("bobby1", "bob.roberts@gmail.com", "Bob", "Roberts", "password"),
+    ("black.panther", "black.panther@super.heroes", "T", "Challa", "Wakanda"),
+    ("superman", "superman@super.heroes", "Clark", "Kent", "kryptonite"),
+    ("batman", "dark.knight@super.heroes", "Bruce", "Wayne", "frankmiller"),
+    ("spiderman", "spiderman@super.heroes", "Peter", "Parker", "arachnid"),
+    ("ironman", "ironman@super.heroes", "Tony", "Stark", "robertdowney"),
+    ("captain.america", "captain.america@super.heroes", "Steve", "Rogers", "donaldtrump"),
+    ("dr.manhatten", "dr.manhatten@super.heroes", "Jonathan", "Osterman", "hydrogen"),
+    ("vampire.slayer", "vampire.slayer@super.heroes", "Buffy", "Summers", "sarahgellar"),
+    ("Ozymandias", "Ozymandias@super.villains", "Adrian", "Veidt", "shelley"),
+    ("Rorschach", "Rorschach@super.villains", "Walter", "Kovacs", "Joseph"),
+    ("power.woman", "power.woman@super.heroes", "Jessica", "Jones", "lukecage");
+
+SET FOREIGN_KEY_CHECKS=1;
