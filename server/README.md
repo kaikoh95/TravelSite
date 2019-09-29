@@ -23,12 +23,12 @@ Note: The value of ```SENG365_PORT``` is defined for you when the skeleton proje
 # Running locally
 
 All you need to do to run your server locally is create a `.env` file in the root directory of this project including the following information:
-
+Please note that you have to set up the MySQL database before setting up this server.
 ```
-SENG365_MYSQL_HOST=mysql3.csse.canterbury.ac.nz
-SENG365_MYSQL_USER={your usercode}
-SENG365_MYSQL_PASSWORD={your ID number}
-SENG365_MYSQL_DATABASE={your usercode}
+TRAVEL_DB_HOST={the host of your db}
+TRAVEL_DB_USER=user
+TRAVEL_DB_PASSWORD=password
+TRAVEL_DB_DATABASE=travelapp
 ```
 
 1. Use `npm install` to populate the `node_modules/` directory with up-to-date packages.

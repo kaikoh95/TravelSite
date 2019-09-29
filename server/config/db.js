@@ -5,10 +5,10 @@ let pool = null;
 exports.createPool = async function () {
     pool = mysql.createPool({
         multipleStatements: true,
-        host: process.env.SENG365_MYSQL_HOST,
-        user: process.env.SENG365_MYSQL_USER,
-        password: process.env.SENG365_MYSQL_PASSWORD,
-        database: process.env.SENG365_MYSQL_DATABASE
+        host: process.env.TRAVEL_DB_HOST,
+        user: process.env.TRAVEL_DB_USER,
+        password: process.env.TRAVEL_DB_PASSWORD,
+        database: process.env.TRAVEL_DB_DATABASE
     });
 };
 
