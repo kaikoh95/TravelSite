@@ -6,3 +6,5 @@ Currently only supports Desktop browsers; will be adding support for Mobile brow
 I have used Docker to run the backend server and deployed the web app on netlify - https://travel-review.netlify.com 
 
 This is the repo used for automatically deploying the web app - https://github.com/kaikoh95/travel-reviewer
+
+Run the docker compose script in db folder to set up the database via Docker
