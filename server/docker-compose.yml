@@ -1,6 +1,7 @@
 version: "3"
 services:
   app:
+    container_name: travel-server
     build: .
     ports:
       - "4941:4941"
