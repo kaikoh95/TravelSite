@@ -7,4 +7,4 @@ I have used Docker to run the backend server and deployed the web app on netlify
 
 This is the repo used for automatically deploying the web app - https://github.com/kaikoh95/travel-reviewer
 
-Run the docker compose script in db folder to set up the database via Docker
+Run the 'docker-compose up' in db folder to set up the database via Docker and initialise it using the script provided.
