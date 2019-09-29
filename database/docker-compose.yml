@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+  db:
+    container_name: travel-db
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'travel-app'
+      
+      MYSQL_USER: 'user'
+      
+      MYSQL_PASSWORD: 'password'
+      
+      MYSQL_ROOT_PASSWORD: 'password'
+
+    ports:
+      - '3306:3306'
+
+    expose:
+      - '3306'
+
+    volumes:
+      - travel-db:/var/lib/mysql
+
+volumes:
+  travel-db:
