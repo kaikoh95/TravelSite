@@ -9,16 +9,9 @@ COPY package.json /usr/src/app/
 RUN apk add --no-cache make gcc g++ python && \
   npm install --production --silent && \
   apk del make gcc g++ python
-
-RUN npm install
 # Bundle app source
 COPY . /usr/src/app
+COPY wait-for-it.sh /
 
 
-FROM node:11.9.0-alpine
-
-WORKDIR /usr/app
-COPY --from=build /usr/src/app .
-
-EXPOSE 4941
-CMD [ "npm", "start" ]
+CMD /wait-for-it.sh db:3306 -- npm run docker

@@ -11,6 +11,23 @@ services:
       - TRAVEL_DB_PASSWORD
       - TRAVEL_DB_DATABASE
     restart: on-failure
+    depends_on:
+      - db
+
+  db:
+    container_name: travel-db
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'travelapp'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+
 networks:
   default:
     driver: overlay
