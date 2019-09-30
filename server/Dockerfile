@@ -11,7 +11,11 @@ RUN apk add --no-cache make gcc g++ python && \
   apk del make gcc g++ python
 # Bundle app source
 COPY . /usr/src/app
-COPY wait-for-it.sh /
 
+FROM node:11.9.0-alpine
 
-CMD /wait-for-it.sh db:3306 -- npm run docker
+WORKDIR /usr/app
+COPY --from=build /usr/src/app .
+
+EXPOSE 4941
+CMD [ "npm", "start" ]
